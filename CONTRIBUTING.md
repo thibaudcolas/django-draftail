@@ -16,9 +16,9 @@ Please note that this project is released with a [Contributor Code of Conduct](d
 git clone git@github.com:thibaudcolas/django-draftail.git
 cd django-draftail/
 # Install required Python versions
-pyenv install --skip-existing 3.7.2
+pyenv install --skip-existing 3.7.3
 # Make required Python versions available globally.
-pyenv global system 3.7.2
+pyenv global system 3.7.3
 # Install the Python environment.
 virtualenv .venv -p python3.7
 source ./.venv/bin/activate
