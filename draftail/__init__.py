@@ -1,0 +1,8 @@
+__name__ = "django-draftail"
+__version__ = "0.1.0"
+__description__ = "A configurable rich text editor built with Draft.js"
+__author__ = "Thibaud Colas"
+__author_email__ = "thibaudcolas@gmail.com"
+__url__ = "https://github.com/thibaudcolas/django-draftail"
+__license__ = "MIT"
+__copyright__ = "Copyright 2019-present Thibaud Colas"
