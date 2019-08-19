@@ -2,7 +2,7 @@
 [run]
 branch = True
 
-source = draftjs_exporter
+source = draftail
 
 [report]
 # Regexes for lines to exclude from consideration

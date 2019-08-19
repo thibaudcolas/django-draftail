@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-from __future__ import absolute_import, unicode_literals
-
 import io
 
 from draftail import (
@@ -19,6 +17,8 @@ try:
     from setuptools import setup, find_packages
 except ImportError:
     from distutils.core import setup
+
+install_requires = ["django>=2.2,<=3.0", "draftjs_exporter>=2.1.6,<=3.0.0"]
 
 with io.open("README.md", encoding="utf-8") as readme_file:
     long_description = readme_file.read()
@@ -68,23 +68,6 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: Text Editors :: Word Processors",
     ],
-    install_requires=["Django>=2.0"],
-    extras_require={
-        # Keep this in sync with the dependencies in tox.ini.
-        "docs": [],
-        "testing": [
-            # Required for running the tests.
-            "tox>=2.3.1",
-            # Benchmark dependencies.
-            "markov_draftjs==0.1.1",
-            "memory-profiler==0.47",
-            "psutil==5.4.1",
-            # For coverage and PEP8 linting.
-            "coverage>=4.1.0",
-            "flake8>=3.2.0",
-            "isort==4.2.5",
-            "black==19.3b0",
-        ],
-    },
+    install_requires=install_requires,
     zip_safe=False,
 )

@@ -7,7 +7,7 @@ help: ## See what commands are available.
 init: clean-pyc ## Install dependencies and initialise for development.
 	./.githooks/deploy.sh
 	pip install --upgrade pip setuptools twine
-	pip install -e '.[testing,docs]' -U
+	pip install -r requirements.txt
 	npm install
 
 lint: ## Lint the project.
@@ -33,12 +33,6 @@ test-coverage: ## Run the tests while generating test coverage data.
 test-ci: ## Continuous integration test suite.
 	tox
 	npm run test:ci
-
-dev: ## Restarts the example whenever a file changes.
-	nodemon -q -e py -w tests -w draftail -w example.py  -x "clear && python example.py || true"
-
-benchmark: ## Runs a one-off performance (speed, memory) benchmark.
-	python benchmark.py
 
 clean-pyc: ## Remove Python file artifacts.
 	find . -name '*.pyc' -exec rm -f {} +

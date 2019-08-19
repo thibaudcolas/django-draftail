@@ -2,7 +2,7 @@
   "name": "django-draftail",
   "version": "0.1.0",
   "private": true,
-  "description": "",
+  "description": "Django integration of Draftail, a configurable rich text editor built with Draft.js",
   "author": "Thibaud Colas",
   "license": "MIT",
   "homepage": "https://github.com/thibaudcolas/django-draftail",
@@ -14,13 +14,15 @@
     "url": "https://github.com/thibaudcolas/django-draftail/issues"
   },
   "devDependencies": {
-    "@commitlint/cli": "^7.5.2",
-    "@commitlint/config-conventional": "^7.5.0",
-    "prettier": "^1.16.4"
+    "@commitlint/cli": "8.1.0",
+    "@commitlint/config-conventional": "8.1.0",
+    "@commitlint/travis-cli": "8.1.0",
+    "danger": "9.1.7",
+    "prettier": "1.18.2"
   },
   "scripts": {
-    "lint": "prettier --check '**/*.{md,css,scss,js,json,yaml,yml,html}'",
-    "format": "prettier --write '**/*.{md,css,scss,js,json,yaml,yml,html}'",
+    "lint": "prettier --check '**/?(.)*.{md,css,scss,js,json,yaml,yml,html}'",
+    "format": "prettier --write '**/?(.)*.{md,css,scss,js,json,yaml,yml,html}'",
     "test:ci": "npm run lint -s"
   }
 }

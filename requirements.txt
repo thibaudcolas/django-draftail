@@ -1,3 +1,19 @@
-gunicorn
-django-heroku
-dj-database-url
+# Project dependencies to install for dev.
+# ============================================
+django==2.2.4
+draftjs_exporter==2.1.6
+
+# Code quality.
+black==19.3b0
+isort==4.2.5
+flake8==3.7.8
+jinjalint>=0.5
+
+# Benchmarking.
+psutil==5.4.1
+memory-profiler==0.47
+markov_draftjs==0.1.1
+
+# Testing.
+coverage==4.1.0
+tox==2.3.1
