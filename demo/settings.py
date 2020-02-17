@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ["*"]
 INSTALLED_APPS = [
     "demo.polls.apps.PollsConfig",
     "demo.feedback.apps.FeedbackConfig",
+    "draftail",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

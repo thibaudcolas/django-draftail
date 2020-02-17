@@ -7,8 +7,20 @@ from .draft_text import DraftText
 
 
 class DraftailEditor(forms.HiddenInput):
-    def __init__(self, attrs=None, options=None, features=None):
-        super(DraftailEditor, self).__init__(attrs)
+    template_name = "draftail/draftail_editor.html"
+
+    # Do not mark the field as hidden, even though it inherits from a hidden input.
+    is_hidden = False
+
+    def __init__(self, *args, **kwargs):
+        default_attrs = {"data-django-draftail": "DraftailEditor"}
+
+        attrs = kwargs.get("attrs")
+        if attrs:
+            default_attrs.update(attrs)
+        kwargs["attrs"] = default_attrs
+
+        super(DraftailEditor, self).__init__(*args, **kwargs)
 
     def render(self, name, value=None, attrs=None, renderer=None):
         json_value = value
@@ -54,11 +66,6 @@ class DraftailEditor(forms.HiddenInput):
 
         return json.dumps(value)
 
-    @property
-    def is_hidden(self):
-        """Do not mark the field as hidden, even though it inherits from a hidden input."""
-        return False
-
     class Media:
-        js = ["draftail/draftail.js"]
-        css = {"all": ["draftail/draftail.css"]}
+        js = ["draftail.bundle.js"]
+        css = {"all": ["draftail.bundle.css"]}
