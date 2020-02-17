@@ -2,13 +2,12 @@ import datetime
 
 from django.db import models
 from django.utils import timezone
-
-from draftail.fields import DraftailTextField
+from draftail.fields import RichTextField
 
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
-    question_details = DraftailTextField(default=None, blank=True, null=True)
+    question_details = RichTextField(default=None, blank=True, null=True)
     pub_date = models.DateTimeField("date published")
 
     def __str__(self):
