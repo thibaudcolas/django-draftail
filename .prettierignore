@@ -3,4 +3,6 @@ node_modules
 .tox
 webpack-stats.html
 *.html
+.pytest_cache
+coverage_html_report
 draftail/static/
