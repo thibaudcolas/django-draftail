@@ -18,7 +18,7 @@ try:
 except ImportError:
     from distutils.core import setup
 
-install_requires = ["django>=2.2,<=3.0", "draftjs_exporter>=2.1.6,<=3.0.0"]
+install_requires = ["django>=2.2,<=3.0", "draftjs_exporter>=3.0.0,<=4.0.0"]
 
 with io.open("README.md", encoding="utf-8") as readme_file:
     long_description = readme_file.read()

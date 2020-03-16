@@ -1,7 +1,7 @@
 # Project dependencies to install for dev.
 # ============================================
 django==2.2.4
-draftjs_exporter==2.1.6
+draftjs_exporter==3.0.0
 
 # Code quality.
 black==19.3b0
