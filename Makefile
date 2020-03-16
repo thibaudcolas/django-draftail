@@ -22,13 +22,13 @@ format: ## Format project files.
 	npm run format
 
 test: ## Test the project.
-	python -m unittest discover
+	pytest
 
 test-watch: ## Restarts the tests whenever a file changes.
 	nodemon -q -e py -w tests -w draftail  -x "clear && make test -s || true"
 
 test-coverage: ## Run the tests while generating test coverage data.
-	coverage run -m unittest discover && coverage report && coverage html
+	coverage run -m pytest && coverage report && coverage html
 
 test-ci: ## Continuous integration test suite.
 	tox
