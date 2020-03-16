@@ -1,17 +1,19 @@
-sudo: false
+version: ~> 1.0
+dist: bionic
 language: python
-cache: pip
-matrix:
+cache:
+  pip: true
+  directories:
+    - .tox
+jobs:
   include:
     - env: TOXENV=py37
       python: 3.7
-      sudo: required
-      dist: xenial
 install:
   - ./.githooks/deploy.sh
   - nvm install
   - npm ci
-  - pip install -r requirements.txt
+  - pip install tox coveralls
 script:
   - make test-ci
 after_success:
