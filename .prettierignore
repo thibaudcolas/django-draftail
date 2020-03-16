@@ -1,2 +1,6 @@
 node_modules
 .venv
+.tox
+static
+webpack-stats.html
+*.html
