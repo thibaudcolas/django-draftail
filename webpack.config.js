@@ -52,7 +52,7 @@ const webpackConfig = (environment) => {
   const plugins = [
     new webpack.NoEmitOnErrorsPlugin(),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: "[name].bundle.css",
     }),
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify(environment),
