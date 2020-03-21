@@ -7,7 +7,7 @@ help: ## See what commands are available.
 init: clean-pyc ## Install dependencies and initialise for development.
 	./.githooks/deploy.sh
 	pip install --upgrade pip setuptools twine
-	pip install -r requirements.txt
+	pip install -e '.[dev]' -U
 	npm install
 
 lint: ## Lint the project.

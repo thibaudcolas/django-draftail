@@ -20,6 +20,24 @@ except ImportError:
 
 install_requires = ["django>=2.2,<=3.0", "draftjs_exporter>=3.0.0,<=4.0.0"]
 
+dev_requires = [
+    # Code quality.
+    "black==19.3b0",
+    "isort==4.2.5",
+    "flake8==3.7.8",
+    "jinjalint>=0.5",
+    # Benchmarking.
+    "psutil==5.4.1",
+    "memory-profiler==0.47",
+    "markov_draftjs==0.1.1",
+    # Testing.
+    "coverage==5.0.3",
+    "coveralls==1.11.1",
+    "tox==2.3.1",
+    "pytest==5.4.1",
+    "pytest-django==3.8.0",
+]
+
 with io.open("README.md", encoding="utf-8") as readme_file:
     long_description = readme_file.read()
 
@@ -65,5 +83,6 @@ setup(
         "Topic :: Text Editors :: Word Processors",
     ],
     install_requires=install_requires,
+    extras_require={"dev": dev_requires},
     zip_safe=False,
 )
