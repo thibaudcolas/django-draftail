@@ -1,10 +1,7 @@
 version: ~> 1.0
 dist: bionic
 language: python
-cache:
-  pip: true
-  directories:
-    - .tox
+cache: pip
 jobs:
   include:
     - env: TOXENV=py37
