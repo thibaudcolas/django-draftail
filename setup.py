@@ -62,6 +62,7 @@ setup(
     install_requires=["django>=2.2,<3.0", "draftjs_exporter>=3.0.0,<4.0.0"],
     extras_require={
         "dev": [
+            "gunicorn==20.0.4",
             # Code quality.
             "black==19.3b0",
             "isort==4.2.5",
