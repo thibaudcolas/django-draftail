@@ -6,7 +6,7 @@ help: ## See what commands are available.
 
 init: clean-pyc ## Install dependencies and initialise for development.
 	./.githooks/deploy.sh
-	pip install --upgrade pip setuptools twine
+	pip install --upgrade pip setuptools twine tox
 	pip install -e '.[dev]' -U
 	npm install
 
