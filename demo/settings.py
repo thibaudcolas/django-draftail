@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     "demo.polls.apps.PollsConfig",
     "demo.feedback.apps.FeedbackConfig",
     "draftail",
+    "django.contrib.admindocs",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
